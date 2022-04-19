@@ -42,7 +42,7 @@
                                 attributions: '',
                                 tileGrid: new ol.tilegrid.TileGrid({
                                     extent: [0,-13400,30600,0],
-                                    origin: [0,-13400],
+                                    origin: [0,0],
                                     resolutions: [128,64,32,16,8,4,2,1],
                                     tileSize: [256, 256]
                                 }),
@@ -50,7 +50,7 @@
                                     return ('./{z}/{x}/{y}.png'
                                         .replace('{z}', String(tileCoord[0]))
                                         .replace('{x}', String(tileCoord[1]))
-                                        .replace('{y}', String(- 1 - tileCoord[2])));
+                                        .replace('{y}', String(tileCoord[2])));
                                 },
                             })
                         }),
